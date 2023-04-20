@@ -1,0 +1,651 @@
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230420184943)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230420184943"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-20 18:49:54.353632"], ["updated_at", "2023-04-20 18:49:54.353632"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20230420185025)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" datetime(6)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" datetime(6)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_at" datetime(6)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_at" datetime(6)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230420185025"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/signup" for 127.0.0.1 at 2023-04-20 13:53:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/signup"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 13:53:19 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.4ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 144.9ms | Allocations: 72646)
+Completed 200 OK in 156ms (Views: 146.7ms | ActiveRecord: 0.0ms | Allocations: 75280)
+
+
+Started GET "/blah" for 127.0.0.1 at 2023-04-20 13:53:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/blah"):
+  
+Started GET "/users/signup" for 127.0.0.1 at 2023-04-20 13:53:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/signup"):
+  
+Started GET "/users/signin" for 127.0.0.1 at 2023-04-20 13:54:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/signin"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 13:54:36 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 239)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 597)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 6884)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 8541)
+Completed 200 OK in 28ms (Views: 18.2ms | ActiveRecord: 0.2ms | Allocations: 17926)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 13:58:57 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 515)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2463)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 4350)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 5473)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:02:37 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 515)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2394)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4281)
+Completed 200 OK in 19ms (Views: 18.1ms | Allocations: 5400)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:02:51 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 515)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2462)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4350)
+Completed 200 OK in 7ms (Views: 6.4ms | Allocations: 5454)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:03:20 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1208)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2800)
+Completed 200 OK in 9ms (Views: 8.6ms | Allocations: 3316)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:05:19 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1208)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2800)
+Completed 200 OK in 11ms (Views: 9.3ms | Allocations: 3324)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:05:19 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1208)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2800)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 3338)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:07:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 248)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 603)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 5107)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 37786)
+Completed 200 OK in 54ms (Views: 45.9ms | ActiveRecord: 0.2ms | Allocations: 49781)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:19:53 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 515)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2471)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 5085)
+Completed 200 OK in 7ms (Views: 6.3ms | Allocations: 6205)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:23:41 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 515)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2507)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 5120)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 6229)
+
+
+Started POST "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:23:58 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:23:58 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1229)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 3549)
+Completed 200 OK in 3ms (Views: 2.2ms | Allocations: 4063)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started POST "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:25:05 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:25:05 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1228)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3548)
+Completed 200 OK in 4ms (Views: 3.9ms | Allocations: 4077)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:25:33 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1228)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3548)
+Completed 200 OK in 8ms (Views: 7.6ms | Allocations: 4066)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started POST "/users" for 127.0.0.1 at 2023-04-20 14:25:34 -0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 970)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3335)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 5655)
+Completed 422 Unprocessable Entity in 35ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 15615)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-04-20 14:25:35 -0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 840)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3193)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5508)
+Completed 422 Unprocessable Entity in 14ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 7232)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-04-20 14:25:51 -0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2023-04-20 19:25:51.646060"], ["updated_at", "2023-04-20 19:25:51.646060"], ["email", "test@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["sign_in_count", 0], ["current_sign_in_at", nil], ["last_sign_in_at", nil], ["current_sign_in_ip", nil], ["last_sign_in_ip", nil]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 265ms (ActiveRecord: 1.4ms | Allocations: 10090)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 14:25:51 -0500
+Processing by StaticPagesController#root as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2698)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 3407)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:26:04 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms | Allocations: 1848)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 14:26:04 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2514)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 2744)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-04-20 14:26:16 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 14:26:19 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2505)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2732)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:26:26 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1542)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 14:26:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2512)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 2741)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 14:26:28 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 2501)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 2729)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:26:43 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms | Allocations: 1540)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 14:26:43 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2522)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2750)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 14:30:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.4ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 26630)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.0ms | Allocations: 29752)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 14:30:32 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2497)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2728)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:30:37 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 1.2ms | Allocations: 12651)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 14:30:37 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 2513)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 2741)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-04-20 14:30:46 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 9ms (ActiveRecord: 0.1ms | Allocations: 2978)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 14:30:46 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2509)
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 2736)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 14:30:58 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 239)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 602)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.5ms | Allocations: 13077)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 15459)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 16589)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:45:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 1051)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1675)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 28029)
+Completed 200 OK in 44ms (Views: 34.9ms | ActiveRecord: 0.2ms | Allocations: 40028)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:47:38 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 542)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 901)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3525)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 4633)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:47:39 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2497)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 3030)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:49:11 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 542)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 938)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3559)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 4673)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:49:11 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2497)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 3015)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:49:41 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 542)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 937)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 3558)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 4678)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:50:38 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 542)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 937)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 3558)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 4667)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:51:04 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 542)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 904)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 3527)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 4653)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:51:04 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2497)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 3005)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:51:31 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 542)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 904)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3525)
+Completed 200 OK in 6ms (Views: 5.8ms | Allocations: 4621)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:51:32 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2496)
+Completed 200 OK in 6ms (Views: 4.9ms | Allocations: 3022)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-20 16:52:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 270)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3926)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 6310)
+Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 7584)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:53:14 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 542)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 907)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3523)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 4621)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started POST "/users" for 127.0.0.1 at 2023-04-20 16:53:52 -0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test2@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test2@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2023-04-20 21:53:53.087744"], ["updated_at", "2023-04-20 21:53:53.087744"], ["email", "test2@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["sign_in_count", 0], ["current_sign_in_at", nil], ["last_sign_in_at", nil], ["current_sign_in_ip", nil], ["last_sign_in_ip", nil]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 251ms (ActiveRecord: 2.1ms | Allocations: 10185)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 16:53:53 -0500
+Processing by StaticPagesController#root as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2722)
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3435)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-04-20 16:54:07 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 7ms (ActiveRecord: 0.2ms | Allocations: 2595)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 16:54:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2482)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 2709)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 16:54:10 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 91)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 177)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2497)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3031)
+
+
