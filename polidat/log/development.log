@@ -649,3 +649,530 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3031)
 
 
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 17:00:34 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2814)
+Completed 200 OK in 12ms (Views: 11.1ms | Allocations: 3914)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 17:00:35 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2348)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 2859)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 17:00:50 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5216)
+Completed 200 OK in 10ms (Views: 9.4ms | Allocations: 5723)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-20 17:01:01 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2579)
+Completed 200 OK in 8ms (Views: 6.9ms | Allocations: 3488)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 17:01:03 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2343)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 2858)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-20 17:01:10 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2343)
+Completed 200 OK in 8ms (Views: 7.0ms | Allocations: 2932)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2023-04-20 17:01:12 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 574)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1966)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4345)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 5315)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 17:02:05 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2343)
+Completed 200 OK in 7ms (Views: 6.3ms | Allocations: 2875)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-20 17:02:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2343)
+Completed 200 OK in 5ms (Views: 3.3ms | Allocations: 2929)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-04-20 17:02:25 -0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test2@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test2@example.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 269ms (ActiveRecord: 0.4ms | Allocations: 10526)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:02:25 -0500
+Processing by StaticPagesController#root as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2695)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 3295)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-04-20 17:02:44 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 7ms (ActiveRecord: 0.3ms | Allocations: 1818)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:02:44 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2481)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 2709)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-20 17:02:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2348)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2934)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 17:02:48 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2343)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 2849)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 17:08:49 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 5673)
+Completed 200 OK in 24ms (Views: 22.6ms | Allocations: 6809)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 17:08:50 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2348)
+Completed 200 OK in 10ms (Views: 8.9ms | Allocations: 2880)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:08:54 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2316)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2404)
+Completed 500 Internal Server Error in 11ms (Allocations: 2952)
+
+
+  
+ActionView::Template::Error (The asset "logo.png" is not present in the asset pipeline.
+):
+     7:             <div class="flex items-center justify-between w-full md:w-auto">
+     8:               <a href="/">
+     9:                 <span class="sr-only">CreatorPlatform.xyz</span>
+    10:                 <img class="h-8 w-auto sm:h-10" src="<%= image_path('logo.png') %>" alt="">
+    11:               </a>
+    12:               <div class="-mr-2 flex items-center md:hidden">
+    13:                 <button type="button" class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
+  
+app/views/static_pages/root.html.erb:10
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:27:25 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 30.2ms | Allocations: 18750)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 18837)
+Completed 500 Internal Server Error in 31ms (Allocations: 19041)
+
+
+  
+ActionView::Template::Error (The asset "dashboard.png" is not present in the asset pipeline.
+):
+    125:             <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">Get paid and easily spend your funds. No bank account needed.</p>
+    126:           </div>
+    127:           <div class="mt-12 -mb-10 sm:-mb-24 lg:-mb-20">
+    128:             <img class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="<%= image_path('dashboard.png') %>" alt="Creator platform dashboard">
+    129:           </div>
+    130:         </div>
+    131:       </div>
+  
+app/views/static_pages/root.html.erb:128
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:49:22 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 25.2ms | Allocations: 18122)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 20385)
+Completed 200 OK in 28ms (Views: 27.9ms | Allocations: 20612)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:51:49 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2118)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 4618)
+Completed 200 OK in 5ms (Views: 5.0ms | Allocations: 5348)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:52:21 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2112)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4612)
+Completed 200 OK in 6ms (Views: 5.6ms | Allocations: 5343)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:52:42 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1479)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3700)
+Completed 200 OK in 3ms (Views: 2.9ms | Allocations: 3927)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:52:43 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1491)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3712)
+Completed 200 OK in 12ms (Views: 11.8ms | Allocations: 3938)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:52:51 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1476)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 6579)
+Completed 200 OK in 10ms (Views: 9.9ms | Allocations: 6805)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 17:57:50 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1775)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3996)
+Completed 200 OK in 10ms (Views: 9.7ms | Allocations: 4222)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:01:53 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1766)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3987)
+Completed 200 OK in 13ms (Views: 12.9ms | Allocations: 4213)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:03:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1485)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3706)
+Completed 200 OK in 7ms (Views: 7.1ms | Allocations: 3932)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:03:27 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1485)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 3706)
+Completed 200 OK in 3ms (Views: 2.9ms | Allocations: 3932)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:03:34 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1785)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4006)
+Completed 200 OK in 10ms (Views: 9.6ms | Allocations: 4232)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/dashboard" for 127.0.0.1 at 2023-04-20 18:03:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:03:49 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1467)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3688)
+Completed 200 OK in 7ms (Views: 6.4ms | Allocations: 3914)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:04:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2103)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 4603)
+Completed 200 OK in 6ms (Views: 5.5ms | Allocations: 5333)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:06:06 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2130)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 4630)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 5361)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:07:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2130)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 4630)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 5361)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:07:47 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2115)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 4615)
+Completed 200 OK in 4ms (Views: 4.2ms | Allocations: 5346)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:08:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2142)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 4642)
+Completed 200 OK in 5ms (Views: 4.8ms | Allocations: 5373)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:10:01 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2147)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 4647)
+Completed 200 OK in 5ms (Views: 4.8ms | Allocations: 5378)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:11:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2124)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4624)
+Completed 200 OK in 12ms (Views: 11.5ms | Allocations: 5355)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-20 18:11:21 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2575)
+Completed 200 OK in 11ms (Views: 9.7ms | Allocations: 3564)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-20 18:11:26 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2582)
+Completed 200 OK in 10ms (Views: 8.6ms | Allocations: 3435)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:12:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2110)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 4609)
+Completed 200 OK in 5ms (Views: 4.9ms | Allocations: 5341)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:12:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2126)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 4626)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 5357)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:13:36 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2117)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 4617)
+Completed 200 OK in 5ms (Views: 5.2ms | Allocations: 5348)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:14:16 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1485)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 3706)
+Completed 200 OK in 3ms (Views: 2.9ms | Allocations: 3933)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
+Started GET "/" for 127.0.0.1 at 2023-04-20 18:14:18 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1482)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 3703)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 3929)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
+  
