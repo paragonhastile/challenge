@@ -1176,3 +1176,528 @@ Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 3929)
   
 ActionController::RoutingError (No route matches [GET] "/application.js-8ba9081948d1575727b2c622571d65e6a79ab5897495a194bc44a53677931a22.map"):
   
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421164516)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421164516)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421164516)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421164516)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421164516)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421164516)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421164516)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421164516)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421165835)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" json, "source" varchar, "processing_erros" text, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230421165835"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_erros", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", nil], ["source", nil], ["processing_erros", nil], ["status", nil], ["created_at", "2023-04-21 17:03:50.949768"], ["updated_at", "2023-04-21 17:03:50.949768"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.9ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_erros", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", nil], ["source", nil], ["processing_erros", nil], ["status", nil], ["created_at", "2023-04-21 17:04:17.302181"], ["updated_at", "2023-04-21 17:04:17.302181"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_erros", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", nil], ["source", nil], ["processing_erros", nil], ["status", nil], ["created_at", "2023-04-21 17:05:16.266420"], ["updated_at", "2023-04-21 17:05:16.266420"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_erros", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", nil], ["source", nil], ["processing_erros", nil], ["status", nil], ["created_at", "2023-04-21 17:08:57.826216"], ["updated_at", "2023-04-21 17:08:57.826216"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_erros", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", nil], ["source", nil], ["processing_erros", nil], ["status", nil], ["created_at", "2023-04-21 17:09:29.820278"], ["updated_at", "2023-04-21 17:09:29.820278"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_erros", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", nil], ["source", nil], ["processing_erros", nil], ["status", nil], ["created_at", "2023-04-21 17:11:30.080962"], ["updated_at", "2023-04-21 17:11:30.080962"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421165835)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "events"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230421165835"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421165835)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" json NOT NULL, "source" varchar NOT NULL, "processing_errors" text, "status" varchar DEFAULT 'pending' NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230421165835"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", nil], ["source", nil], ["processing_errors", nil], ["status", "pending"], ["created_at", "2023-04-21 17:14:49.648948"], ["updated_at", "2023-04-21 17:14:49.648948"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421165835)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "events"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230421165835"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421165835)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" json DEFAULT '{}' NOT NULL, "source" varchar DEFAULT '' NOT NULL, "processing_errors" text DEFAULT '', "status" varchar DEFAULT 'pending' NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230421165835"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", nil], ["source", nil], ["processing_errors", nil], ["status", "pending"], ["created_at", "2023-04-21 17:15:51.160278"], ["updated_at", "2023-04-21 17:15:51.160278"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (1.0ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", nil], ["source", nil], ["processing_errors", nil], ["status", "pending"], ["created_at", "2023-04-21 17:15:59.515912"], ["updated_at", "2023-04-21 17:15:59.515912"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421165835)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "events"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230421165835"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421165835)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" json DEFAULT '{}' NOT NULL, "source" varchar DEFAULT '' NOT NULL, "processing_errors" text DEFAULT '', "status" varchar DEFAULT 'pending' NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230421165835"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421165835)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "events"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230421165835"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20230421165835)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" json DEFAULT '{}' NOT NULL, "source" varchar DEFAULT '' NOT NULL, "processing_errors" text DEFAULT '', "status" varchar DEFAULT 'pending' NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230421165835"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "events"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" json DEFAULT '{}' NOT NULL, "source" varchar DEFAULT '' NOT NULL, "processing_errors" text DEFAULT '', "status" varchar DEFAULT 'pending' NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime(6), "last_sign_in_at" datetime(6), "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230421165835)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230420184943),
+(20230420185025);
+
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-21 17:18:09.894242"], ["updated_at", "2023-04-21 17:18:09.894242"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7e88b195d1a4c4b25e29fc3b7a30bf7e6576eb21"], ["created_at", "2023-04-21 17:18:09.897014"], ["updated_at", "2023-04-21 17:18:09.897014"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "events"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" json DEFAULT '{}' NOT NULL, "source" varchar DEFAULT '' NOT NULL, "processing_errors" text DEFAULT '', "status" varchar DEFAULT 'pending' NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime(6), "last_sign_in_at" datetime(6), "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230421165835)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230420184943),
+(20230420185025);
+
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-21 17:18:09.904190"], ["updated_at", "2023-04-21 17:18:09.904190"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2023-04-21 17:18:09.905735"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7e88b195d1a4c4b25e29fc3b7a30bf7e6576eb21"], ["created_at", "2023-04-21 17:18:09.907283"], ["updated_at", "2023-04-21 17:18:09.907283"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{}"], ["source", ""], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 17:18:47.185767"], ["updated_at", "2023-04-21 17:18:47.185767"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/webhooks" for 127.0.0.1 at 2023-04-21 12:36:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/webhooks"):
+  
+Started POST "/webhooks" for 127.0.0.1 at 2023-04-21 12:38:03 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/webhooks"):
+  
+Started POST "/webhooks" for 127.0.0.1 at 2023-04-21 12:40:19 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/webhooks"):
+  
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started POST "/webhooks/curl" for 127.0.0.1 at 2023-04-21 12:42:40 -0500
+Processing by WebhooksController#create as */*
+  Parameters: {"data"=>"data", "source"=>"curl", "webhook"=>{"data"=>"data"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"data\":\"data\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"curl\",\"webhook\":{\"data\":\"data\"}}"], ["source", "curl"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 17:42:40.241398"], ["updated_at", "2023-04-21 17:42:40.241398"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for [::1]:6379)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms | Allocations: 17704)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for [::1]:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started POST "/webhooks/curl" for 127.0.0.1 at 2023-04-21 12:55:54 -0500
+Processing by WebhooksController#create as */*
+  Parameters: {"data"=>"data", "source"=>"curl", "webhook"=>{"data"=>"data"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"data\":\"data\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"curl\",\"webhook\":{\"data\":\"data\"}}"], ["source", "curl"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 17:55:54.253425"], ["updated_at", "2023-04-21 17:55:54.253425"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for [::1]:6379)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.9ms | Allocations: 8275)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for [::1]:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started GET "/" for 127.0.0.1 at 2023-04-21 14:45:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 39.5ms | Allocations: 26144)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 30651)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.0ms | Allocations: 33787)
+
+
+Started POST "/webhooks/stripe" for ::1 at 2023-04-21 14:46:00 -0500
+Processing by WebhooksController#create as XML
+  Parameters: {"id"=>"evt_1MzPu8L7moJMlUXdMYMdwcnt", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682106360, "data"=>{"object"=>{"id"=>"cus_Nkvlye1fcMnCBS", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682106360, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"BBB2EECA", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_nSnd7C5yppZzjy", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "source"=>"stripe", "webhook"=>{"id"=>"evt_1MzPu8L7moJMlUXdMYMdwcnt", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682106360, "data"=>{"object"=>{"id"=>"cus_Nkvlye1fcMnCBS", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682106360, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"BBB2EECA", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_nSnd7C5yppZzjy", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"id\":\"evt_1MzPu8L7moJMlUXdMYMdwcnt\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682106360,\"data\":{\"object\":{\"id\":\"cus_Nkvlye1fcMnCBS\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682106360,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"BBB2EECA\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_nSnd7C5yppZzjy\",\"idempotency_key\":\"aad738b2-fc40-49c7-86c5-5fd95570033b\"},\"type\":\"customer.created\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"stripe\",\"webhook\":{\"id\":\"evt_1MzPu8L7moJMlUXdMYMdwcnt\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682106360,\"data\":{\"object\":{\"id\":\"cus_Nkvlye1fcMnCBS\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682106360,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"BBB2EECA\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_nSnd7C5yppZzjy\",\"idempotency_key\":\"aad738b2-fc40-49c7-86c5-5fd95570033b\"},\"type\":\"customer.created\"}}"], ["source", "stripe"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 19:46:00.846740"], ["updated_at", "2023-04-21 19:46:00.846740"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms | Allocations: 14586)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+Started POST "/webhooks/stripe" for ::1 at 2023-04-21 14:46:44 -0500
+Processing by WebhooksController#create as XML
+  Parameters: {"id"=>"evt_1MzPuqL7moJMlUXdnrTYVzJO", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682106404, "data"=>{"object"=>{"id"=>"cus_NkvmV7UP4ZqhND", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682106404, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"A642A804", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_yKx4fUdXflkTSt", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "source"=>"stripe", "webhook"=>{"id"=>"evt_1MzPuqL7moJMlUXdnrTYVzJO", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682106404, "data"=>{"object"=>{"id"=>"cus_NkvmV7UP4ZqhND", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682106404, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"A642A804", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_yKx4fUdXflkTSt", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"id\":\"evt_1MzPuqL7moJMlUXdnrTYVzJO\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682106404,\"data\":{\"object\":{\"id\":\"cus_NkvmV7UP4ZqhND\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682106404,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"A642A804\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_yKx4fUdXflkTSt\",\"idempotency_key\":\"fde39dcf-1c6a-49ad-b24e-b0ac71b26424\"},\"type\":\"customer.created\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"stripe\",\"webhook\":{\"id\":\"evt_1MzPuqL7moJMlUXdnrTYVzJO\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682106404,\"data\":{\"object\":{\"id\":\"cus_NkvmV7UP4ZqhND\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682106404,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"A642A804\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_yKx4fUdXflkTSt\",\"idempotency_key\":\"fde39dcf-1c6a-49ad-b24e-b0ac71b26424\"},\"type\":\"customer.created\"}}"], ["source", "stripe"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 19:46:44.439784"], ["updated_at", "2023-04-21 19:46:44.439784"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms | Allocations: 6743)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+Started POST "/webhooks/stripe" for 127.0.0.1 at 2023-04-21 14:47:59 -0500
+Processing by WebhooksController#create as */*
+  Parameters: {"data"=>"data", "source"=>"stripe", "webhook"=>{"data"=>"data"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"data\":\"data\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"stripe\",\"webhook\":{\"data\":\"data\"}}"], ["source", "stripe"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 19:47:59.016279"], ["updated_at", "2023-04-21 19:47:59.016279"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.9ms | Allocations: 5249)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+Started POST "/webhooks/stripe" for 127.0.0.1 at 2023-04-21 14:53:26 -0500
+Processing by WebhooksController#create as */*
+  Parameters: {"data"=>"data", "source"=>"stripe", "webhook"=>{"data"=>"data"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"data\":\"data\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"stripe\",\"webhook\":{\"data\":\"data\"}}"], ["source", "stripe"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 19:53:26.472154"], ["updated_at", "2023-04-21 19:53:26.472154"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.1ms | Allocations: 5249)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+Started POST "/webhooks/stripe" for 127.0.0.1 at 2023-04-21 14:53:29 -0500
+Processing by WebhooksController#create as */*
+  Parameters: {"data"=>"data", "source"=>"stripe", "webhook"=>{"data"=>"data"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"data\":\"data\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"stripe\",\"webhook\":{\"data\":\"data\"}}"], ["source", "stripe"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 19:53:29.371181"], ["updated_at", "2023-04-21 19:53:29.371181"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.7ms | Allocations: 5236)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started POST "/webhooks/thunder" for 127.0.0.1 at 2023-04-21 14:53:54 -0500
+Processing by WebhooksController#create as */*
+  Parameters: {"data"=>"data", "source"=>"thunder", "webhook"=>{"data"=>"data"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"data\":\"data\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"thunder\",\"webhook\":{\"data\":\"data\"}}"], ["source", "thunder"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 19:53:54.287297"], ["updated_at", "2023-04-21 19:53:54.287297"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms | Allocations: 5236)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started POST "/webhooks/stripe" for ::1 at 2023-04-21 14:54:06 -0500
+Processing by WebhooksController#create as XML
+  Parameters: {"id"=>"evt_1MzQ1yL7moJMlUXdBEXEGWqz", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682106846, "data"=>{"object"=>{"id"=>"cus_Nkvta5Em6nTgyR", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682106846, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"0549AE89", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_oWmDy03DBuAEz7", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "source"=>"stripe", "webhook"=>{"id"=>"evt_1MzQ1yL7moJMlUXdBEXEGWqz", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682106846, "data"=>{"object"=>{"id"=>"cus_Nkvta5Em6nTgyR", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682106846, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"0549AE89", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_oWmDy03DBuAEz7", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"id\":\"evt_1MzQ1yL7moJMlUXdBEXEGWqz\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682106846,\"data\":{\"object\":{\"id\":\"cus_Nkvta5Em6nTgyR\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682106846,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"0549AE89\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_oWmDy03DBuAEz7\",\"idempotency_key\":\"0bfd743e-f7c4-4af8-8538-dbc45406cccf\"},\"type\":\"customer.created\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"stripe\",\"webhook\":{\"id\":\"evt_1MzQ1yL7moJMlUXdBEXEGWqz\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682106846,\"data\":{\"object\":{\"id\":\"cus_Nkvta5Em6nTgyR\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682106846,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"0549AE89\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_oWmDy03DBuAEz7\",\"idempotency_key\":\"0bfd743e-f7c4-4af8-8538-dbc45406cccf\"},\"type\":\"customer.created\"}}"], ["source", "stripe"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 19:54:06.710623"], ["updated_at", "2023-04-21 19:54:06.710623"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.1ms | Allocations: 6727)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Delete All (2.7ms)[0m  [1m[31mDELETE FROM "events"[0m
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+Started POST "/webhooks/thunder" for 127.0.0.1 at 2023-04-21 14:56:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebhooksController#create as */*
+  Parameters: {"data"=>"data", "source"=>"thunder", "webhook"=>{"data"=>"data"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"data\":\"data\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"thunder\",\"webhook\":{\"data\":\"data\"}}"], ["source", "thunder"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 19:56:20.522752"], ["updated_at", "2023-04-21 19:56:20.522752"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.8ms | Allocations: 14252)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+  [1m[36mEvent Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started POST "/webhooks/thunder" for 127.0.0.1 at 2023-04-21 14:58:35 -0500
+Processing by WebhooksController#create as */*
+  Parameters: {"data"=>"data", "source"=>"thunder", "webhook"=>{"data"=>"data"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"data\":\"data\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"thunder\",\"webhook\":{\"data\":\"data\"}}"], ["source", "thunder"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 19:58:35.658986"], ["updated_at", "2023-04-21 19:58:35.658986"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Failed enqueuing HandleEventJob to Sidekiq(default): RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms | Allocations: 5256)
+
+
+  
+RedisClient::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379):
+  
+app/controllers/webhooks_controller.rb:9:in `create'
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started POST "/webhooks/thunder" for 127.0.0.1 at 2023-04-21 15:15:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebhooksController#create as */*
+  Parameters: {"data"=>"data", "source"=>"thunder", "webhook"=>{"data"=>"data"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"data\":\"data\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"thunder\",\"webhook\":{\"data\":\"data\"}}"], ["source", "thunder"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 20:15:44.884695"], ["updated_at", "2023-04-21 20:15:44.884695"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Enqueued HandleEventJob (Job ID: c4801562-009e-461b-87ef-8b9ca1562f51) to Sidekiq(default) with arguments: #<GlobalID:0x0000000109300700 @uri=#<URI::GID gid://polidat/Event/13>>
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 11794)
+
+
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started POST "/webhooks/stripe" for ::1 at 2023-04-21 15:22:43 -0500
+Processing by WebhooksController#create as XML
+  Parameters: {"id"=>"evt_1MzQTfL7moJMlUXdd7NLnZCh", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682108563, "data"=>{"object"=>{"id"=>"cus_NkwMN7bMWLce1q", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682108563, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"C610250B", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_QTB1HXjs7NzcVy", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "source"=>"stripe", "webhook"=>{"id"=>"evt_1MzQTfL7moJMlUXdd7NLnZCh", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682108563, "data"=>{"object"=>{"id"=>"cus_NkwMN7bMWLce1q", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682108563, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"C610250B", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_QTB1HXjs7NzcVy", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"id\":\"evt_1MzQTfL7moJMlUXdd7NLnZCh\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682108563,\"data\":{\"object\":{\"id\":\"cus_NkwMN7bMWLce1q\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682108563,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"C610250B\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_QTB1HXjs7NzcVy\",\"idempotency_key\":\"64045184-e90e-44ed-8b42-93a662d77de9\"},\"type\":\"customer.created\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"stripe\",\"webhook\":{\"id\":\"evt_1MzQTfL7moJMlUXdd7NLnZCh\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682108563,\"data\":{\"object\":{\"id\":\"cus_NkwMN7bMWLce1q\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682108563,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"C610250B\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_QTB1HXjs7NzcVy\",\"idempotency_key\":\"64045184-e90e-44ed-8b42-93a662d77de9\"},\"type\":\"customer.created\"}}"], ["source", "stripe"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 20:22:43.329380"], ["updated_at", "2023-04-21 20:22:43.329380"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Enqueued HandleEventJob (Job ID: c13cd8ec-1ec3-49a7-9901-51a45dae33bb) to Sidekiq(default) with arguments: #<GlobalID:0x000000010960a090 @uri=#<URI::GID gid://polidat/Event/14>>
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 4089)
+
+
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+[ActiveJob] [HandleEventJob] [c13cd8ec-1ec3-49a7-9901-51a45dae33bb]   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[ActiveJob] [HandleEventJob] [c4801562-009e-461b-87ef-8b9ca1562f51]   [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[ActiveJob] [HandleEventJob] [c13cd8ec-1ec3-49a7-9901-51a45dae33bb] Performing HandleEventJob (Job ID: c13cd8ec-1ec3-49a7-9901-51a45dae33bb) from Sidekiq(default) enqueued at 2023-04-21T20:22:43Z with arguments: #<GlobalID:0x0000000106ab2d48 @uri=#<URI::GID gid://polidat/Event/14>>
+[ActiveJob] [HandleEventJob] [c4801562-009e-461b-87ef-8b9ca1562f51] Performing HandleEventJob (Job ID: c4801562-009e-461b-87ef-8b9ca1562f51) from Sidekiq(default) enqueued at 2023-04-21T20:15:44Z with arguments: #<GlobalID:0x0000000106ab03b8 @uri=#<URI::GID gid://polidat/Event/13>>
+[ActiveJob] [HandleEventJob] [c13cd8ec-1ec3-49a7-9901-51a45dae33bb] Performed HandleEventJob (Job ID: c13cd8ec-1ec3-49a7-9901-51a45dae33bb) from Sidekiq(default) in 19.81ms
+[ActiveJob] [HandleEventJob] [c4801562-009e-461b-87ef-8b9ca1562f51] Performed HandleEventJob (Job ID: c4801562-009e-461b-87ef-8b9ca1562f51) from Sidekiq(default) in 20.52ms
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Delete All (2.7ms)[0m  [1m[31mDELETE FROM "events"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started POST "/webhooks/stripe" for ::1 at 2023-04-21 16:05:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebhooksController#create as XML
+  Parameters: {"id"=>"evt_1MzR9HL7moJMlUXdqpGtpXXa", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682111143, "data"=>{"object"=>{"id"=>"cus_Nkx3CYSjZwimzx", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682111143, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"4EF7B9EE", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_GPVUtNlKJOk0Om", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "source"=>"stripe", "webhook"=>{"id"=>"evt_1MzR9HL7moJMlUXdqpGtpXXa", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682111143, "data"=>{"object"=>{"id"=>"cus_Nkx3CYSjZwimzx", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682111143, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"4EF7B9EE", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_GPVUtNlKJOk0Om", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"id\":\"evt_1MzR9HL7moJMlUXdqpGtpXXa\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682111143,\"data\":{\"object\":{\"id\":\"cus_Nkx3CYSjZwimzx\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682111143,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"4EF7B9EE\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_GPVUtNlKJOk0Om\",\"idempotency_key\":\"d5d1b442-3b42-4898-99af-2ef1fe5b45a8\"},\"type\":\"customer.created\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"stripe\",\"webhook\":{\"id\":\"evt_1MzR9HL7moJMlUXdqpGtpXXa\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682111143,\"data\":{\"object\":{\"id\":\"cus_Nkx3CYSjZwimzx\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682111143,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"4EF7B9EE\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_GPVUtNlKJOk0Om\",\"idempotency_key\":\"d5d1b442-3b42-4898-99af-2ef1fe5b45a8\"},\"type\":\"customer.created\"}}"], ["source", "stripe"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 21:05:43.461384"], ["updated_at", "2023-04-21 21:05:43.461384"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Enqueued HandleEventJob (Job ID: 43b1515e-9eee-4f98-bbff-7715af16d294) to Sidekiq(default) with arguments: #<GlobalID:0x000000010655dfa0 @uri=#<URI::GID gid://polidat/Event/15>>
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 13315)
+
+
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+[ActiveJob] [HandleEventJob] [43b1515e-9eee-4f98-bbff-7715af16d294]   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[ActiveJob] [HandleEventJob] [43b1515e-9eee-4f98-bbff-7715af16d294] Performing HandleEventJob (Job ID: 43b1515e-9eee-4f98-bbff-7715af16d294) from Sidekiq(default) enqueued at 2023-04-21T21:05:43Z with arguments: #<GlobalID:0x0000000113c36dd8 @uri=#<URI::GID gid://polidat/Event/15>>
+[ActiveJob] [HandleEventJob] [43b1515e-9eee-4f98-bbff-7715af16d294] Performed HandleEventJob (Job ID: 43b1515e-9eee-4f98-bbff-7715af16d294) from Sidekiq(default) in 13.62ms
+Started POST "/webhooks/stripe" for ::1 at 2023-04-21 16:08:18 -0500
+Started POST "/webhooks/stripe" for ::1 at 2023-04-21 16:08:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebhooksController#create as XML
+Processing by WebhooksController#create as XML
+  Parameters: {"id"=>"evt_1MzRBmL7moJMlUXd7G3dhCGS", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682111298, "data"=>{"object"=>{"id"=>"cus_Nkx52W9ViVp2rV", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682111298, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"6F2746E2", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_ahXlrLcXlnpICL", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "source"=>"stripe", "webhook"=>{"id"=>"evt_1MzRBmL7moJMlUXd7G3dhCGS", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682111298, "data"=>{"object"=>{"id"=>"cus_Nkx52W9ViVp2rV", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682111298, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"6F2746E2", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_ahXlrLcXlnpICL", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created"}}
+  Parameters: {"id"=>"evt_1MzRBmL7moJMlUXd7G3dhCGS", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682111298, "data"=>{"object"=>{"id"=>"cus_Nkx52W9ViVp2rV", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682111298, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"6F2746E2", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_ahXlrLcXlnpICL", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "source"=>"stripe", "webhook"=>{"id"=>"evt_1MzRBmL7moJMlUXd7G3dhCGS", "object"=>"event", "api_version"=>"2022-11-15", "created"=>1682111298, "data"=>{"object"=>{"id"=>"cus_Nkx52W9ViVp2rV", "object"=>"customer", "address"=>nil, "balance"=>0, "created"=>1682111298, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>"(created by Stripe CLI)", "discount"=>nil, "email"=>nil, "invoice_prefix"=>"6F2746E2", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil, "rendering_options"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>nil, "next_invoice_sequence"=>1, "phone"=>nil, "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none", "test_clock"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_ahXlrLcXlnpICL", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"id\":\"evt_1MzRBmL7moJMlUXd7G3dhCGS\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682111298,\"data\":{\"object\":{\"id\":\"cus_Nkx52W9ViVp2rV\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682111298,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"6F2746E2\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_ahXlrLcXlnpICL\",\"idempotency_key\":\"2ef9f989-6645-4ae4-a1b5-4d2ab2977724\"},\"type\":\"customer.created\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"stripe\",\"webhook\":{\"id\":\"evt_1MzRBmL7moJMlUXd7G3dhCGS\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682111298,\"data\":{\"object\":{\"id\":\"cus_Nkx52W9ViVp2rV\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682111298,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"6F2746E2\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_ahXlrLcXlnpICL\",\"idempotency_key\":\"2ef9f989-6645-4ae4-a1b5-4d2ab2977724\"},\"type\":\"customer.created\"}}"], ["source", "stripe"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 21:08:18.623856"], ["updated_at", "2023-04-21 21:08:18.623856"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mEvent Create (5233.7ms)[0m  [1m[32mINSERT INTO "events" ("data", "source", "processing_errors", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "{\"id\":\"evt_1MzRBmL7moJMlUXd7G3dhCGS\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682111298,\"data\":{\"object\":{\"id\":\"cus_Nkx52W9ViVp2rV\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682111298,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"6F2746E2\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_ahXlrLcXlnpICL\",\"idempotency_key\":\"2ef9f989-6645-4ae4-a1b5-4d2ab2977724\"},\"type\":\"customer.created\",\"controller\":\"webhooks\",\"action\":\"create\",\"source\":\"stripe\",\"webhook\":{\"id\":\"evt_1MzRBmL7moJMlUXd7G3dhCGS\",\"object\":\"event\",\"api_version\":\"2022-11-15\",\"created\":1682111298,\"data\":{\"object\":{\"id\":\"cus_Nkx52W9ViVp2rV\",\"object\":\"customer\",\"address\":null,\"balance\":0,\"created\":1682111298,\"currency\":null,\"default_source\":null,\"delinquent\":false,\"description\":\"(created by Stripe CLI)\",\"discount\":null,\"email\":null,\"invoice_prefix\":\"6F2746E2\",\"invoice_settings\":{\"custom_fields\":null,\"default_payment_method\":null,\"footer\":null,\"rendering_options\":null},\"livemode\":false,\"metadata\":{},\"name\":null,\"next_invoice_sequence\":1,\"phone\":null,\"preferred_locales\":[],\"shipping\":null,\"tax_exempt\":\"none\",\"test_clock\":null}},\"livemode\":false,\"pending_webhooks\":2,\"request\":{\"id\":\"req_ahXlrLcXlnpICL\",\"idempotency_key\":\"2ef9f989-6645-4ae4-a1b5-4d2ab2977724\"},\"type\":\"customer.created\"}}"], ["source", "stripe"], ["processing_errors", ""], ["status", "pending"], ["created_at", "2023-04-21 21:08:18.624495"], ["updated_at", "2023-04-21 21:08:18.624495"]]
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/webhooks_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 5247ms (ActiveRecord: 5233.8ms | Allocations: 16470)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/webhooks_controller.rb:5:in `create'
+[ActiveJob] Enqueued HandleEventJob (Job ID: 94717a7a-f8c0-4dbc-b11d-1e7550ac479b) to Sidekiq(default) with arguments: #<GlobalID:0x00000001167941d8 @uri=#<URI::GID gid://polidat/Event/16>>
+Completed 200 OK in 5391ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 345218)
+
+
+[ActiveJob] [HandleEventJob] [94717a7a-f8c0-4dbc-b11d-1e7550ac479b]   [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[ActiveJob] [HandleEventJob] [94717a7a-f8c0-4dbc-b11d-1e7550ac479b] Performing HandleEventJob (Job ID: 94717a7a-f8c0-4dbc-b11d-1e7550ac479b) from Sidekiq(default) enqueued at 2023-04-21T21:08:23Z with arguments: #<GlobalID:0x00000001158bedc0 @uri=#<URI::GID gid://polidat/Event/16>>
+[ActiveJob] [HandleEventJob] [94717a7a-f8c0-4dbc-b11d-1e7550ac479b] Performed HandleEventJob (Job ID: 94717a7a-f8c0-4dbc-b11d-1e7550ac479b) from Sidekiq(default) in 2.37ms
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
