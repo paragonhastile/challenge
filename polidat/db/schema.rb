@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_20_185025) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_21_165835) do
+  create_table "events", force: :cascade do |t|
+    t.json "data", default: {}, null: false
+    t.string "source", default: "", null: false
+    t.text "processing_errors", default: ""
+    t.string "status", default: "pending", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
