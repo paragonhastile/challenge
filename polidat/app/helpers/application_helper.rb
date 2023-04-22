@@ -8,7 +8,7 @@ module ApplicationHelper
         name: 'Accounts',
         path: '/accounts'
         }, {
-        name: 'Products',
+        name: 'Datasets',
         path: '/products',
         }, {
         name: 'Store',
