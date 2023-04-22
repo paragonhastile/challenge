@@ -17,6 +17,8 @@ class StripeAccount
             type: 'express',
             country: 'US',
             email: @account.user.email,
+            business_type: 'company',
+            
             capabilities: {
                 card_payments: {requested: true},
                 transfers: {requested: true}
