@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   post '/webhooks/:source', to: 'webhooks#create'
   root 'static_pages#root'
   resource :dashboard
+  resources :accounts
 end
