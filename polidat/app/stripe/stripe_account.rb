@@ -10,6 +10,7 @@ class StripeAccount
         Rails.application.config.action_mailer.default_url_options
     end
 
+    # create the account in Stripe, update the polidat account with the returned stripe_id
     def create_account
         return if @account.stripe_id.present?
 
@@ -22,7 +23,7 @@ class StripeAccount
             capabilities: {
                 card_payments: {requested: true},
                 transfers: {requested: true}
-                ## TODO: unfortuneately, Stripe requires a sales cycle before 
+                ## TODO: unfortuneately, Stripe requires a sales cycle before you can use these features
                 # treasury: {requested: true},
                 # card_issueing: {requested: true}
             }
