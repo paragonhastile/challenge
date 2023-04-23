@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resource :dashboard
   resources :accounts
+  get "accounts/connect", to: "accounts#connect", as: :stripe_connect
   resources :products
   resource :store
   resources :storefronts
