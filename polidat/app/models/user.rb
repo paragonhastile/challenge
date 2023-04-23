@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :products
   has_one :account
+  has_one :store
+  accepts_nested_attributes_for :store
 end

@@ -1,5 +1,9 @@
 class ProductsController < ApplicationController
-  
+
+  layout 'authorized'
+
+  before_action :authenticate_user!
+
   def index
     @products = current_user.products.order(created_at: :desc)
   end
