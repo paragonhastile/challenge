@@ -19,32 +19,37 @@ class StorefrontsController < ApplicationController
   end
 
   def checkout
-    if params.has_key? 'priceid' and not params['priceid'].blank?
+    if params.has_key? 'priceid' and not params['priceid'].blank? and params.has_key? 'productid' and not params['productid'].blank?
 
-      # TODO: there are some nuances to this feature method due to it being a consolidated call and its unclear in the stripe documentation, when you specify a destination account its somewhat unclear what affect that has on the context of the api call
-      # for example, you can configure to have the connected account collect the payment and then transfer the application fee to the platform account which is what is being done below, 
-      # or you can do 'destination charges' which is where the platform account collects the payment and then transfers the application fee to the connected account which is specified by the payment_intent_data.transfer_data.destination attribute
-      # my experience was if you want to make this call you need to be in the context of the connected account by passing a second param containing the stripe account id of the connected account.
-      # you want to be in the connected account context if that connected account has created products with prices in order to get the price id of the price which is required for execution.
-      # a person would intuitively think they would then need to specify the platform account as the destination account in order to collect the application fee but this is not the case as that account is not accepted by the api call
-      # since no desitination account is specified by the below configuration and the fee still hits the platform account, it must be that the api keys are used to determine the destination account which is the platform account even though the context of the call is the is the connected account.
-      # either way I hate all in one workflow/wizards like these, in a production situation I would prefer to wire up the screens granularly to the individual api calls to avoid any contradictions
+      product = current_store.products.find(params['productid'])
+      if product
 
-      checkout_session = Stripe::Checkout::Session.create({
-          mode: 'payment',
-          line_items: [
-            {price: params['priceid'], quantity: 1},
-          ],
-          payment_intent_data: {
-            application_fee_amount: 1000
-          },
-          success_url: storefronts_url + '/' + params[:id] + '/checkout/' + '{CHECKOUT_SESSION_ID}' + '/confirmation',
-          # cancel_url: 'https://example.com/cancel',
-      }, {
-          stripe_account: @storefront.user.account.stripe_id
-      })
 
-      redirect_to checkout_session.url, allow_other_host: true, status: :see_other
+        # TODO: there are some nuances to this feature method due to it being a consolidated call and its unclear in the stripe documentation, when you specify a destination account its somewhat unclear what affect that has on the context of the api call
+        # for example, you can configure to have the connected account collect the payment and then transfer the application fee to the platform account which is what is being done below, 
+        # or you can do 'destination charges' which is where the platform account collects the payment and then transfers the application fee to the connected account which is specified by the payment_intent_data.transfer_data.destination attribute
+        # my experience was if you want to make this call you need to be in the context of the connected account by passing a second param containing the stripe account id of the connected account.
+        # you want to be in the connected account context if that connected account has created products with prices in order to get the price id of the price which is required for execution.
+        # a person would intuitively think they would then need to specify the platform account as the destination account in order to collect the application fee but this is not the case as that account is not accepted by the api call
+        # since no desitination account is specified by the below configuration and the fee still hits the platform account, it must be that the api keys are used to determine the destination account which is the platform account even though the context of the call is the is the connected account.
+
+        checkout_session = Stripe::Checkout::Session.create({
+            mode: 'payment',
+            line_items: [
+              {price: product.stripe_price_id, quantity: 1},
+            ],
+            payment_intent_data: {
+              application_fee_amount: (product.priceraw / 100) * 10,
+            },
+            success_url: storefronts_url + '/' + params[:id] + '/checkout/' + '{CHECKOUT_SESSION_ID}' + '/confirmation',
+            # cancel_url: 'https://example.com/cancel',
+        }, {
+            stripe_account: @storefront.user.account.stripe_id
+        })
+
+        redirect_to checkout_session.url, allow_other_host: true, status: :see_other
+
+      end
     end
   end 
 
