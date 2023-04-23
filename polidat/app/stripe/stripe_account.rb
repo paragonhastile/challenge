@@ -10,6 +10,10 @@ class StripeAccount
         Rails.application.config.action_mailer.default_url_options
     end
 
+    def authorize_account
+        return if @account.stripe_id.present?
+    end
+
     # create the account in Stripe, update the polidat account with the returned stripe_id
     def create_account
         return if @account.stripe_id.present?

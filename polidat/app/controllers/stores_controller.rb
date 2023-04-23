@@ -1,6 +1,8 @@
 class StoresController < ApplicationController
+
+    layout 'authorized'
+
     before_action :authenticate_user!
-    layout 'application'
 
     def show
         @store = current_user.store

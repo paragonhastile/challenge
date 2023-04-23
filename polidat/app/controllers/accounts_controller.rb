@@ -1,6 +1,9 @@
 class AccountsController < ApplicationController
-  before_action :authenticate_user!
 
+  layout 'authorized'
+  
+  before_action :authenticate_user!
+  
   def index
     
   end

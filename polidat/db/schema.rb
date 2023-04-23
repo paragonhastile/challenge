@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_22_150027) do
   end
 
   create_table "stores", force: :cascade do |t|
+    t.string "name"
     t.string "subdomain"
     t.string "domain"
     t.string "primary_color"
