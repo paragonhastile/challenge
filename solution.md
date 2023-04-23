@@ -16,9 +16,9 @@ The high level use cases of the PoliDat marketplace are the following:
 - Platform accepts payment from buyer and credits seller account and platform fee account
 - Platform makes payout of credit balance to seller  
 
-A solution (due:04/23/23) to the Rev challenge problem will be a MVC web app, built with Ruby on Rails and manually deployed (no CICD setup) to AWS Elasticbeanstalk and RDS. The app will process buyer payments, seller payouts and PoliDat fees with Stripe. The app will consist of the following resources.
+A solution (due:04/23/23) to the Rev challenge problem will be a MVC web app, built with Ruby on Rails with instructions to deploy locally. The app will process buyer payments, seller connections and PoliDat fees with Stripe. The app will consist of the following resources.
 
-**Seller Components**
+**Seller Components (pelim vision)**
 - Dashboard (seller dashboard)
 	- GET Seller Payment Balances
 		- Available, Instance Available, Pending
@@ -50,7 +50,7 @@ A solution (due:04/23/23) to the Rev challenge problem will be a MVC web app, bu
 	- GET Customer By Id
 		- Email, Stripe Id, Name
 
-**Buyer Components**
+**Buyer Components (pelim vision)**
 - Store (store front)
 	- PUT Login (Stripe auth)
 		- email address
