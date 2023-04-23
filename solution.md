@@ -68,4 +68,4 @@ A solution (due:04/23/23) to the Rev challenge problem will be a MVC web app, bu
 	- GET Orders
 	- GET Order By Id
 
-A extended solution (if time allows) to the Rev challenge problem will be a frontend React admin portal with a backend serverless event based microservice solution with a REST API, built with Typescript on Node, SAM infrasturcture as code and deployed manually (no CICD setup) to AWS Lambda and Dynamo.
+A extended solution (if time allows) to the Rev challenge problem will be a frontend React app with a backend serverless event based microservice solution with a REST API, built with Typescript on Node, SAM infrasturcture as code and deployed manually (no CICD setup) to AWS Lambda and Dynamo.
