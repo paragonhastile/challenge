@@ -25,6 +25,7 @@
       <form action="/storefronts/<%= @storefront.id %>/checkout" method="post" data-turbo="false">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <input type="hidden" name="priceid" value="<%= product.stripe_price_id %>">
+        <input type="hidden" name="productid" value="<%= product.id %>">
         <button type="submit" style="background-color: grey" class="w-full mt-4 items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
           Buy
         </button>

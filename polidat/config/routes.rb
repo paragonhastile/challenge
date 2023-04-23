@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :storefronts
   get 'storefronts/:id', to: 'storefronts#show'
   post 'storefronts/:id/checkout', to: 'storefronts#checkout'
+  get 'storefronts/:id/checkout/:session/confirmation', to: 'storefronts#confirmation'
 end

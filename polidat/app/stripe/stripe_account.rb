@@ -27,7 +27,7 @@ class StripeAccount
             capabilities: {
                 card_payments: {requested: true},
                 transfers: {requested: true}
-                ## TODO: unfortuneately, Stripe requires a sales cycle before you can use these features
+                ## TODO: unfortunately, Stripe requires a sales cycle before you can use these features
                 # treasury: {requested: true},
                 # card_issueing: {requested: true}
             }
