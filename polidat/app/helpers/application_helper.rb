@@ -13,9 +13,6 @@ module ApplicationHelper
         }, {
         name: 'Store',
         path: '/store',
-        }, {
-        name: 'Customers',
-        path: '/customers',
         }].map do |item|
         {
             name: item[:name],
