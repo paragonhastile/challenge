@@ -12,7 +12,7 @@ datasource db {
 
 model User {
   id    String @id @unique
-  email String @unique
+  email String
 
   accounts Account[]
   stores   Store[]
