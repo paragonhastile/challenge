@@ -27,17 +27,19 @@ describe('App API', () => {
             expect(response.body.data).toEqual("pong");
         });
 
-        describe("post user", () => {
+        describe("POST: user", () => {
 
             it("should add a new user", async () => {
 
+                await prisma.store.deleteMany({});
                 await prisma.account.deleteMany({});
                 await prisma.user.deleteMany({});
 
                 const response = await supertest(app)
                     .post("/user")
                     .send({ 
-                        email: "test7@example.com" 
+                        email: "test7@example.com",
+                        storeName: 'test store'
                     });
             
                 expect(response.status).toEqual(201);
@@ -50,27 +52,31 @@ describe('App API', () => {
 
             it("should enforce unique user email", async () => {
 
+                await prisma.store.deleteMany({});
                 await prisma.account.deleteMany({});
                 await prisma.user.deleteMany({});
 
                 const response = await supertest(app)
                     .post("/user")
                     .send({ 
-                        email: "test7@example.com" 
+                        email: "test7@example.com",
+                        storeName: 'test store'
                     });
 
                 console.log(response.status)
 
                 expect(response.status).toEqual(201);
                 expect(response.type).toEqual("application/json");
+                console.log(response.body)
                 expect(response.body).toEqual({
-                    email: "test7@example.com",
+                    email: "test7@example.com"
                 });
 
                 const response2 = await supertest(app)
                     .post("/user")
                     .send({ 
-                        email: "test7@example.com" 
+                        email: "test7@example.com",
+                        storeName: 'test store'
                     });
 
                 console.log(response2.status)
@@ -85,23 +91,6 @@ describe('App API', () => {
 
         });
 
-        // it('should create user', async () => {
-
-        //     const deleteResp = prisma.user.delete({ where: { id: 1, } });
-            
-        //     // const getResp = await supertest(app).get('/user/1');
-        //     // console.log(getResp.body);
-        //     // expect(getResp.statusCode).toEqual(400);
-
-        //     const putResp = await supertest(app).put('/user/1')
-        //         .send({ email: 'test9@example.com' })
-        //     expect(putResp.statusCode).toEqual(204);
-
-
-        //     // const getResp = await supertest(app).get('/user/1');
-        //     // expect(getResp.statusCode).toEqual(200);
-
-        // });
 
     });
 

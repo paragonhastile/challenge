@@ -19,9 +19,21 @@ router.get(`/ping`, async (ctx) => {
 router.post(`/user`, async (ctx) => {
     try {
 
+        const ctxreq: any = ctx.request.body;
+        const email = ctxreq.email;
+        const storeName = ctxreq.storeName;
+
+        // validate fields
+        if (!email || !storeName) {
+            ctx.status = 400;
+            ctx.body = {
+                message: "Missing required fields.",
+            };
+        }
+
         // check for existing user email
-        let foundUser = await prisma.user.findUnique( { where: { email: "test98@example.com" } } ); 
-        console.log(foundUser);
+        let foundUser = await prisma.user.findUnique( { where: { email: email } } ); 
+
         if (foundUser) {
             ctx.status = 409;
             ctx.body = {
@@ -29,37 +41,46 @@ router.post(`/user`, async (ctx) => {
             };
         }
 
+        // init account
         let account = {
             stripeAccountId: '',
             paymentsEnabled: false,
             payoutsEnabled: false,
         }
 
+        // init store
+        let store = {
+            name: storeName,
+        }
+
         let user: Prisma.UserCreateInput = {
-            email: "test98@example.com",
+            email: email,
             accounts: { 
                 create: [
                     { ...account }
+                ]
+            },
+            stores: { 
+                create: [
+                    { ...store }
                 ]
             }
         }
 
         let createNested = {
             accounts: true,
+            stores: true
         }
 
         // put the item
-        const createResponse = await prisma.user.create({ data: user, include: createNested });
-        console.log(createResponse);
-        const getResponse = await prisma.user.findUnique( { where: { id: 2 } } );
-        console.log(getResponse);
+        await prisma.user.create({ data: user, include: createNested });
 
         ctx.status = 201;
         ctx.body = {
-          email: "test7@example.com",
+          email: email,
         };
     } catch (err) {
-      console.error(err);
+        console.error(err);
     }
 });
 
