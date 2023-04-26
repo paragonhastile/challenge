@@ -3,6 +3,9 @@ import 'express-async-errors';
 import express, { json } from 'express';
 import helmet from 'helmet';
 
+import * as UserRoutes from './user/user-routes';
+
+
 const errorHandling = (err:any, _req:any, res:any, _next:any) => {
   try {
     res.status(err.statusCode).json({
@@ -26,6 +29,8 @@ app.get('/ping', (_, res) => {
     msg: 'pong',
   });
 });
+
+UserRoutes.mount('/user', app);
 
 app.use((_, res, _2) => {
   res.status(404).json({ error: 'NOT FOUND' });
