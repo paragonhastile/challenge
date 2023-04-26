@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@swc/jest": "^0.2.26",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^6.1.5"
+  },
+  "devDependencies": {
+    "@prisma/client": "^4.13.0",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.1",
+    "@types/supertest": "^2.0.12",
+    "dynalite": "^3.2.2",
+    "jest": "^29.5.0",
+    "prisma": "^4.13.0",
+    "sqlite3": "^5.1.6",
+    "supertest": "^6.3.3",
+    "typescript": "^5.0.4"
+  }
+}
