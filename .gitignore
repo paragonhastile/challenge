@@ -41,3 +41,5 @@
 /polidat/node_modules
 
 /api-polidat/node_modules
+
+/api-polidat/coverage
