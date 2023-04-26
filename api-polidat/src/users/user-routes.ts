@@ -16,6 +16,30 @@ router.get(`/ping`, async (ctx) => {
   }
 });
 
+
+router.get(`/user`, async (ctx) => {
+    try {
+      
+        const ctxreq: any = ctx.request.query;
+        const email = ctxreq.email;
+
+        let foundUser = await prisma.user.findUnique( { where: { email: email } } );
+
+        if (!foundUser) {
+            ctx.status = 404;
+            ctx.body = {
+                message: "User not found.",
+            };
+        } else {
+            ctx.status = 200;
+            ctx.body = { ...foundUser };
+        }
+
+    } catch (err) {
+      console.error(err);
+    }
+});
+
 router.post(`/user`, async (ctx) => {
     try {
 
