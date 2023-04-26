@@ -1,41 +1,30 @@
-import 'express-async-errors';
+import Koa from "koa";
+import bodyParser from "koa-bodyparser";
+import cors from "koa2-cors";
+import logger from "koa-logger";
 
-import express, { json } from 'express';
-import helmet from 'helmet';
+import userRoutes from './users/user-routes'
 
-import * as UserRoutes from './user/user-routes';
+const app = new Koa();
 
+const PORT = process.env.PORT || 7654;
 
-const errorHandling = (err:any, _req:any, res:any, _next:any) => {
-  try {
-    res.status(err.statusCode).json({
-      msg: err.message,
-    });
-  } catch (exc: any) {
-    console.log(exc);
-    res.status(500).json({
-      msg: 'Internal Server Error',
-      success: false,
-    });
-  }
-};
+app.use(bodyParser());
+app.use(
+  cors({
+    origin: "*"
+  })
+);
+app.use(logger());
 
-const app = express();
-app.use(json());
-app.use(helmet());
+app.use(userRoutes.routes());
 
-app.get('/ping', (_, res) => {
-  res.status(200).json({
-    msg: 'pong',
+const server = app
+  .listen(PORT, async () => {
+    console.log(`Server listening on port: ${PORT}`);
+  })
+  .on("error", err => {
+    console.error(err);
   });
-});
 
-UserRoutes.mount('/user', app);
-
-app.use((_, res, _2) => {
-  res.status(404).json({ error: 'NOT FOUND' });
-});
-
-app.use(errorHandling);
-
-export { app };
+export default server;
