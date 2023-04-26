@@ -11,7 +11,7 @@ datasource db {
 }
 
 model User {
-  id    String @id @unique
+  id    Int @id @default(autoincrement())
   email String
 
   accounts Account[]
@@ -22,22 +22,21 @@ model User {
 }
 
 model Account {
-  id String @id @unique
-
-  userId String
+  id Int @id @default(autoincrement())
+  stripeAccountId String
+  paymentsEnabled Boolean
+  payoutsEnabled Boolean
+  userId Int
   user   User   @relation(fields: [userId], references: [id])
-
-  email String  @unique
-  name  String?
 
   createdAt DateTime @default(now())
 }
 
 model Store {
-  id   String @id @unique
-  name String @unique
+  id   Int @id @default(autoincrement())
+  name String
 
-  userId String
+  userId Int
   user   User   @relation(fields: [userId], references: [id])
 
   products Product[]
@@ -48,25 +47,25 @@ model Store {
 }
 
 model Product {
-  id          String  @id @unique
+  id          Int  @id @default(autoincrement())
   name        String
   description String?
 
-  storeId String
+  storeId Int
   store   Store  @relation(fields: [storeId], references: [id])
 
   createdAt DateTime @default(now())
 }
 
 model Order {
-  id          String  @id @unique
+  id          Int  @id @default(autoincrement())
   name        String
   description String?
 
-  buyerId String
+  buyerId Int
   buyer   User   @relation(fields: [buyerId], references: [id])
 
-  storeId String
+  storeId Int
   store   Store  @relation(fields: [storeId], references: [id])
 
   createdAt DateTime @default(now())

@@ -1,6 +1,8 @@
 import supertest from 'supertest';
 
-import { prismaMock } from '../singleton'
+import { PrismaClient, Prisma } from '@prisma/client';
+
+const prisma = new PrismaClient()
 
 import { app } from '../app';
 
@@ -15,19 +17,16 @@ describe('App API', () => {
 
         it('should create user', async () => {
 
-            prismaMock.user.delete({ where: { id: '1', } });
-
+            const deleteResp = prisma.user.delete({ where: { id: 1, } });
+            
             // const getResp = await supertest(app).get('/user/1');
             // console.log(getResp.body);
             // expect(getResp.statusCode).toEqual(400);
 
-            try {
-                const putResp = await supertest(app).put('/user/1')
-                    .send({ id: '1', email: 'test2@example.com' })
-                expect(putResp.statusCode).toEqual(204);
-            } catch (exc: any) {
-                console.log(exc);;
-            }
+            const putResp = await supertest(app).put('/user/1')
+                .send({ email: 'test9@example.com' })
+            expect(putResp.statusCode).toEqual(204);
+
 
             // const getResp = await supertest(app).get('/user/1');
             // expect(getResp.statusCode).toEqual(200);
