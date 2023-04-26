@@ -39,3 +39,5 @@
 !/polidat/app/assets/builds/.keep
 
 /polidat/node_modules
+
+/api-polidat/node_modules
