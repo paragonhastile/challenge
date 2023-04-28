@@ -87,6 +87,9 @@ describe('App API', () => {
 
                 expect(response.status).toEqual(400);
                 expect(response.type).toEqual("application/json");
+                expect(response.body).toEqual({
+                    message: '\nInvalid `prisma.user.findUnique()` invocation:\n\n{\n  where: {\n?   email?: String,\n?   id?: Int\n  }\n}\n\nArgument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.\n\nNote: Lines with ? are optional.\n',
+                });
                 console.log(response.body)
             
             });
@@ -125,7 +128,7 @@ describe('App API', () => {
                 expect(response2.status).toEqual(409);
                 expect(response2.type).toEqual("application/json");
                 expect(response2.body).toEqual({
-                    message: "Email already exists.",
+                    message: '\nInvalid `prisma.user.create()` invocation:\n\n\nUnique constraint failed on the fields: (`email`)',
                 });
             
             });
